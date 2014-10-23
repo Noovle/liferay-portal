@@ -1651,25 +1651,13 @@ public class ArrayUtil {
 
 		double[] newArray = new double[collection.size()];
 
-		if (collection instanceof List) {
-			List<Number> list = (List<Number>)collection;
+		int i = 0;
 
-			for (int i = 0; i < list.size(); i++) {
-				Number value = list.get(i);
-
+		for (Number value : collection) {
+			if (value != null) {
 				newArray[i] = value.doubleValue();
 			}
-		}
-		else {
-			int i = 0;
-
-			Iterator<? extends Number> iterator = collection.iterator();
-
-			while (iterator.hasNext()) {
-				Number value = iterator.next();
-
-				newArray[i++] = value.doubleValue();
-			}
+			i++;
 		}
 
 		return newArray;
@@ -1680,25 +1668,13 @@ public class ArrayUtil {
 
 		float[] newArray = new float[collection.size()];
 
-		if (collection instanceof List) {
-			List<Number> list = (List<Number>)collection;
+		int i = 0;
 
-			for (int i = 0; i < list.size(); i++) {
-				Number value = list.get(i);
-
+		for (Number value : collection) {
+			if (value != null) {
 				newArray[i] = value.floatValue();
 			}
-		}
-		else {
-			int i = 0;
-
-			Iterator<? extends Number> iterator = collection.iterator();
-
-			while (iterator.hasNext()) {
-				Number value = iterator.next();
-
-				newArray[i++] = value.floatValue();
-			}
+			i++;
 		}
 
 		return newArray;
@@ -1707,25 +1683,13 @@ public class ArrayUtil {
 	public static int[] toIntArray(Collection<? extends Number> collection) {
 		int[] newArray = new int[collection.size()];
 
-		if (collection instanceof List) {
-			List<Number> list = (List<Number>)collection;
+		int i = 0;
 
-			for (int i = 0; i < list.size(); i++) {
-				Number value = list.get(i);
-
+		for (Number value : collection) {
+			if (value != null) {
 				newArray[i] = value.intValue();
 			}
-		}
-		else {
-			int i = 0;
-
-			Iterator<? extends Number> iterator = collection.iterator();
-
-			while (iterator.hasNext()) {
-				Number value = iterator.next();
-
-				newArray[i++] = value.intValue();
-			}
+			i++;
 		}
 
 		return newArray;
@@ -1734,25 +1698,13 @@ public class ArrayUtil {
 	public static long[] toLongArray(Collection<? extends Number> collection) {
 		long[] newArray = new long[collection.size()];
 
-		if (collection instanceof List) {
-			List<Number> list = (List<Number>)collection;
+		int i = 0;
 
-			for (int i = 0; i < list.size(); i++) {
-				Number value = list.get(i);
-
+		for (Number value : collection) {
+			if (value != null) {
 				newArray[i] = value.longValue();
 			}
-		}
-		else {
-			int i = 0;
-
-			Iterator<? extends Number> iterator = collection.iterator();
-
-			while (iterator.hasNext()) {
-				Number value = iterator.next();
-
-				newArray[i++] = value.longValue();
-			}
+			i++;
 		}
 
 		return newArray;
@@ -1791,25 +1743,13 @@ public class ArrayUtil {
 	public static short[] toShortArray(Collection<Short> collection) {
 		short[] newArray = new short[collection.size()];
 
-		if (collection instanceof List) {
-			List<Short> list = (List<Short>)collection;
+		int i = 0;
 
-			for (int i = 0; i < list.size(); i++) {
-				Short value = list.get(i);
-
+		for (Number value : collection) {
+			if (value != null) {
 				newArray[i] = value.shortValue();
 			}
-		}
-		else {
-			int i = 0;
-
-			Iterator<Short> iterator = collection.iterator();
-
-			while (iterator.hasNext()) {
-				Short value = iterator.next();
-
-				newArray[i++] = value.shortValue();
-			}
+			i++;
 		}
 
 		return newArray;
