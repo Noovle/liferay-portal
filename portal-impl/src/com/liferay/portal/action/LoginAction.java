@@ -46,11 +46,16 @@ import org.apache.struts.action.ActionForm;
 import org.apache.struts.action.ActionForward;
 import org.apache.struts.action.ActionMapping;
 
+import com.liferay.portal.kernel.log.Log;
+import com.liferay.portal.kernel.log.LogFactoryUtil;
+
 /**
  * @author Brian Wing Shun Chan
  * @author Scott Lee
  */
 public class LoginAction extends Action {
+	
+	private static final Log _log = LogFactoryUtil.getLog(LoginAction.class);
 
 	@Override
 	public ActionForward execute(
